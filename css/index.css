@@ -1,0 +1,70 @@
+body {
+  background-color: rgb(33, 136, 102);
+  color: darkslategray;
+  font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
+}
+
+h1 {
+  text-align: center;
+  font-size: 5em;
+  font-family: serif;
+  color: rgb(30, 30, 30);
+}
+
+h2 {
+  text-align: center;
+  font-size: 3em;
+  color: darkslategray;
+}
+
+section {
+  text-align: center;
+  margin: 5px;
+  padding: 10px;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+#about {
+  text-align: center;
+}
+
+#experience ul {
+  list-style-type: none;
+  padding: 10px;
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+#experience li {
+  background-color: #5bb189;
+  padding: 20px;
+  margin-bottom: 16px;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  font-size: 1.2em;
+  font-weight: 500;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+#experience li:hover {
+  transform: scale(1.02);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+}
+
+#connect ul {
+  list-style-type: none;
+  padding: 10px;
+}
+#connect a {
+  color: blue;
+}
+
+#connect a:hover {
+  color: purple;
+  text-decoration: underline;
+}
