@@ -1,3 +1,6 @@
+/* ==================================*/
+/* MOBILE */
+/* ==================================*/
 body {
   background-color: rgb(33, 136, 102);
   color: darkslategray;
@@ -10,12 +13,13 @@ html {
   padding: 0;
 }
 
+/* Header Section */
 header {
   position: sticky;
   top: 0;
   background-color: darkslategray;
   overflow: hidden;
-  padding: 5px 0;
+  padding: 0.3125rem 0;
 }
 
 header nav {
@@ -26,11 +30,10 @@ header nav {
 header nav ul {
   display: flex;
   justify-content: center;
-  gap: 20px;
+  gap: 0.9375rem;
   list-style-type: none;
   padding: 0;
   margin: 0;
-  gap: 15px;
 }
 
 header nav a {
@@ -53,18 +56,18 @@ h2 {
   text-align: center;
   font-size: 3em;
   color: darkslategray;
-  margin-bottom: 0px;
+  margin-bottom: 0rem;
 }
 
 section {
   text-align: center;
-  margin: 0px;
-  padding: 0px;
-  max-width: 800px;
+  margin: 0;
+  padding: 0;
+  max-width: 50rem;
   margin: auto;
   background-color: #5bb189;
-  padding: 20px;
-  margin-bottom: 16px;
+  padding: 1.25rem;
+  margin-bottom: 1rem;
   font-size: 1.2em;
   font-weight: 500;
   transition: transform 0.2s ease, box-shadow 0.2s ease;
@@ -79,8 +82,9 @@ img {
   text-align: center;
 }
 
+/* Experience Section */
 .experience {
-  border-bottom: 1px solid #314f4f;
+  border-bottom: 0.0625rem solid #314f4f;
 }
 
 .experience-header {
@@ -89,18 +93,12 @@ img {
   align-items: baseline;
 }
 
-/* #experience ul {
-  list-style-type: none;
-  padding: 0px;
-  margin: 0px;
-  text-align: center;
-} */
-
+/* Connect Section */
 #connect ul {
   display: flex;
   justify-content: space-around;
   list-style-type: none;
-  padding: 10px;
+  padding: 0.625rem;
 }
 #connect a {
   color: blue;
@@ -109,4 +107,380 @@ img {
 #connect a:hover {
   color: purple;
   text-decoration: underline;
+}
+
+/* ==================================*/
+/* TABLET */
+/* ==================================*/
+
+@media (min-width: 768px) {
+  h1 {
+    font-size: 7em;
+    color: blanchedalmond;
+  }
+  /* HEADER SECTION */
+
+  header nav ul {
+    gap: 4rem;
+    justify-content: space-evenly;
+  }
+
+  header nav a {
+    color: blanchedalmond;
+    font-size: 1.5rem;
+  }
+
+  h2 {
+    color: blanchedalmond;
+    font-size: 4em;
+  }
+
+  .social-icons a {
+    margin: 0 1.25rem;
+    display: inline-block;
+  }
+
+  .social-icons img:hover {
+    transform: scale(1.1);
+    transition: transform 0.2s ease;
+  }
+}
+
+/* ==================================*/
+/* DESKTOP */
+/* ==================================*/
+
+@media (min-width: 1024px) {
+  h1 {
+    font-size: 9em;
+  }
+
+  /* ==================================*/
+/* MOBILE */
+/* ==================================*/
+body {
+  background-color: rgb(33, 136, 102);
+  color: darkslategray;
+  font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
+}
+
+body,
+html {
+  margin: 0;
+  padding: 0;
+}
+
+/* Header Section */
+header {
+  position: sticky;
+  top: 0;
+  background-color: darkslategray;
+  overflow: hidden;
+  padding: 0.3125rem 0;
+}
+
+header nav {
+  padding: 0;
+  margin: 0;
+}
+
+header nav ul {
+  display: flex;
+  justify-content: center;
+  gap: 0.9375rem;
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+header nav a {
+  color: whitesmoke;
+  text-decoration: none;
+}
+
+header nav a:hover {
+  color: lightgray;
+}
+
+h1 {
+  text-align: center;
+  font-size: 5em;
+  font-family: serif;
+  color: rgb(30, 30, 30);
+}
+
+h2 {
+  text-align: center;
+  font-size: 3em;
+  color: darkslategray;
+  margin-bottom: 0rem;
+}
+
+section {
+  text-align: center;
+  margin: 0;
+  padding: 0;
+  max-width: 50rem;
+  margin: auto;
+  background-color: #5bb189;
+  padding: 1.25rem;
+  margin-bottom: 1rem;
+  font-size: 1.2em;
+  font-weight: 500;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+#about {
+  text-align: center;
+}
+
+/* Experience Section */
+.experience {
+  border-bottom: 0.0625rem solid #314f4f;
+}
+
+.experience-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+}
+
+/* Connect Section */
+#connect ul {
+  display: flex;
+  justify-content: space-around;
+  list-style-type: none;
+  padding: 0.625rem;
+}
+#connect a {
+  color: blue;
+}
+
+#connect a:hover {
+  color: purple;
+  text-decoration: underline;
+}
+
+/* ==================================*/
+/* TABLET */
+/* ==================================*/
+
+@media (min-width: 768px) {
+  h1 {
+    font-size: 7em;
+    color: blanchedalmond;
+  }
+  /* HEADER SECTION */
+
+  header nav ul {
+    gap: 4rem;
+    justify-content: space-evenly;
+  }
+
+  header nav a {
+    color: blanchedalmond;
+    font-size: 1.5rem;
+  }
+
+  h2 {
+    color: blanchedalmond;
+    font-size: 4em;
+  }
+
+  .social-icons a {
+    margin: 0 0.625rem;
+    display: inline-block;
+  }
+
+  .social-icons img:hover {
+    transform: scale(1.1);
+    transition: transform 0.2s ease;
+  }
+}
+
+/* ==================================*/
+/* DESKTOP */
+/* ==================================*/
+
+@media (min-width: 1024px) {
+  h1 {
+    font-size: 9em;
+  }
+}
+
+/* ==================================*/
+/* MOBILE */
+/* ==================================*/
+body {
+  background-color: rgb(33, 136, 102);
+  color: darkslategray;
+  font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
+}
+
+body,
+html {
+  margin: 0;
+  padding: 0;
+}
+
+/* Header Section */
+header {
+  position: sticky;
+  top: 0;
+  background-color: darkslategray;
+  overflow: hidden;
+  padding: 0.3125rem 0;
+}
+
+header nav {
+  padding: 0;
+  margin: 0;
+}
+
+header nav ul {
+  display: flex;
+  justify-content: center;
+  gap: 0.9375rem;
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+header nav a {
+  color: whitesmoke;
+  text-decoration: none;
+}
+
+header nav a:hover {
+  color: lightgray;
+}
+
+h1 {
+  text-align: center;
+  font-size: 5em;
+  font-family: serif;
+  color: rgb(30, 30, 30);
+}
+
+h2 {
+  text-align: center;
+  font-size: 3em;
+  color: darkslategray;
+  margin-bottom: 0rem;
+}
+
+section {
+  text-align: center;
+  margin: 0;
+  padding: 0;
+  max-width: 50rem;
+  margin: auto;
+  background-color: #5bb189;
+  padding: 1.25rem;
+  margin-bottom: 1rem;
+  font-size: 1.2em;
+  font-weight: 500;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+#about {
+  text-align: center;
+}
+
+/* Experience Section */
+.experience {
+  border-bottom: 0.0625rem solid #314f4f;
+}
+
+.experience-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+}
+
+/* Connect Section */
+#connect ul {
+  display: flex;
+  justify-content: space-around;
+  list-style-type: none;
+  padding: 0.625rem;
+}
+#connect a {
+  color: blue;
+}
+
+#connect a:hover {
+  color: purple;
+  text-decoration: underline;
+}
+
+/* ==================================*/
+/* TABLET */
+/* ==================================*/
+
+@media (min-width: 768px) {
+  h1 {
+    font-size: 7em;
+    color: blanchedalmond;
+  }
+  /* HEADER SECTION */
+
+  header nav ul {
+    gap: 4rem;
+    justify-content: space-evenly;
+  }
+
+  header nav a {
+    color: blanchedalmond;
+    font-size: 1.5rem;
+  }
+
+  h2 {
+    color: blanchedalmond;
+    font-size: 4em;
+  }
+
+  .social-icons a {
+    margin: 0 0.625rem;
+    display: inline-block;
+  }
+
+  .social-icons img:hover {
+    transform: scale(1.1);
+    transition: transform 0.2s ease;
+  }
+}
+
+/* ==================================*/
+/* DESKTOP */
+/* ==================================*/
+
+@media (min-width: 1024px) {
+   body {
+    background-color: #285b47;
+    font-size: 1.15rem;
+   }
+
+  
+  h1 {
+    font-size: 8em;
+    max-width: 60rem;
+    margin: 0 auto;
+    text-align: center; 
+  }
+
+  section {
+    max-width: 100%;
+    padding: 2rem 4rem;
+  }
 }
