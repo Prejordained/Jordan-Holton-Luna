@@ -15,6 +15,7 @@
           <li><a href="#skills">Skills</a></li>
           <li><a href="#projects">Projects</a></li>
           <li><a href="#connect">Connect</a></li>
+          <li><a href="#form">Leave a Message</a></li>
         </ul>
       </nav>
     </header>
@@ -45,16 +46,11 @@
         </div>
         <p class="experience-description">Description</p>
       </div>
-
-      <!-- <ul>
-        <li>Code the Dream</li>
-        <li>Codeacademy</li>
-        <li>Coursera</li>
-      </ul> -->
     </section>
 
     <section id="skills">
       <h2>Skills</h2>
+      <ul></ul>
     </section>
 
     <section id="projects">
@@ -64,14 +60,64 @@
 
     <section id="connect">
       <h2>Connect</h2>
-      <ul>
-        <li><a href="https://github.com/Prejordained">Github</a></li>
-        <li>
-          <a href="https://www.linkedin.com/in/jordan-holton-920647a8/"
-            >Linkedin</a
-          >
-        </li>
-      </ul>
+      <div class="social-icons">
+        <a
+          href="https://github.com/Prejordained"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          <img
+            src="images\github-mark-white.png"
+            alt="GitHub"
+            width="32"
+            height="32"
+          />
+        </a>
+        <a
+          href="https://www.linkedin.com/in/jordan-holton-920647a8/"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          <img
+            src="images\InBug-White.png"
+            alt="LinkedIn"
+            width="32"
+            height="32"
+          />
+        </a>
+      </div>
     </section>
+    <section id="Form">
+      <h2>Leave a Message</h2>
+      <form name="leave_messages">
+        <label for="usersName">Name:*</label><br />
+        <input
+          type="text"
+          id="usersName"
+          name="usersName"
+          required
+        /><br /><br />
+
+        <label name="usersEmail">Email:*</label><br />
+        <input
+          type="email"
+          id="usersEmail"
+          name="usersEmail"
+          required
+        /><br /><br />
+
+        <label for="usersMessage">Message:*</label><br />
+        <textarea id="usersMessage" name="usersMessage" required></textarea
+        ><br /><br />
+
+        <button type="submit">Submit</button>
+      </form>
+    </section>
+    <section id="Messages">
+      <h2>Messages</h2>
+      <ul></ul>
+    </section>
+    <footer>Copyright Jordan Holton 2025</footer>
+    <script src="js/index.js"></script>
   </body>
 </html>
