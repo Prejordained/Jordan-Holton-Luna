@@ -3,6 +3,10 @@
 *::after {
   box-sizing: border-box;
 }
+a:hover {
+  color: blanchedalmond !important;
+  text-decoration: underline;
+}
 /* ==================================*/
 /* MOBILE */
 /* ==================================*/
@@ -63,7 +67,7 @@ h1 {
 h2 {
   text-align: center;
   font-size: 3em;
-  color: darkslategray;
+  color: blanchedalmond;
   margin-bottom: 0rem;
 }
 
@@ -105,7 +109,23 @@ img {
 #skills ul {
   list-style: none;
   display: flex;
-  justify-content: space-evenly;
+  justify-content: center;
+  flex-wrap: wrap;
+  padding: 0;
+  margin: 0 auto;
+  max-width: 100%;
+  gap: 1rem;
+}
+
+#skills ul li {
+  border: 1px solid darkslategray;
+  color: darkslategray;
+  background-color: #4b9c78;
+  border-radius: 0.5rem;
+  padding: 1rem;
+  flex: 1 1 12rem;
+  text-align: center;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
 }
 
 /* Connect Section */
@@ -135,6 +155,57 @@ form[name="leave_messages"] button {
   font-size: 1.1rem;
   padding: 1rem;
   width: 100%; /* makes the button easier to tap */
+}
+
+/* Project Section */
+
+#projects {
+  background-color: #5bb189;
+  color: white;
+  border-radius: 0.5rem;
+  padding: 1rem;
+  margin: 1rem auto;
+}
+
+#projects h2 {
+  color: blanchedalmond;
+  margin-bottom: 1rem;
+}
+
+#projects ul {
+  list-style-type: none;
+  padding: 0;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 1rem;
+}
+
+#projects li {
+  background-color: #4b9c78;
+  border: 1px solid darkslategray;
+  border-radius: 0.5rem;
+  padding: 1rem;
+  flex: 1 1 12rem;
+  text-align: center;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+#projects li:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+}
+
+#projects a {
+  color: darkslategray;
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 1.1rem;
+}
+
+#projects a:hover {
+  text-decoration: underline;
+  color: #fff;
 }
 
 /* ==================================*/
@@ -184,21 +255,30 @@ form[name="leave_messages"] button {
     justify-content: space-evenly;
   }
 
-  /* Messages Section */
-  form[name="leave_messages"] {
-    max-width: 700px;
+  /* Projects Section */
+  #projects ul {
+    justify-content: space-evenly;
   }
 
-  form[name="leave_messages"] input,
-  form[name="leave_messages"] textarea {
-    font-size: 1.1rem;
-    padding: 1rem;
+  #projects li {
+    flex: 1 1 14rem;
   }
+}
 
-  form[name="leave_messages"] button {
-    font-size: 1.1rem;
-    padding: 1rem 2rem;
-  }
+/* Messages Section */
+form[name="leave_messages"] {
+  max-width: 700px;
+}
+
+form[name="leave_messages"] input,
+form[name="leave_messages"] textarea {
+  font-size: 1.1rem;
+  padding: 1rem;
+}
+
+form[name="leave_messages"] button {
+  font-size: 1.1rem;
+  padding: 1rem 2rem;
 }
 
 /* ==================================*/
@@ -228,6 +308,29 @@ form[name="leave_messages"] button {
     list-style: none;
     display: flex;
     justify-content: space-evenly;
+  }
+
+  /* Projects Section */
+  #projects {
+    max-width: 100%;
+    margin-bottom: 1rem;
+    padding: 2rem 4rem;
+  }
+  #projects ul {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 1.5rem;
+    justify-content: center;
+    justify-items: center;
+  }
+
+  #projects li {
+    font-size: 1.2rem;
+    padding: 1.5rem;
+  }
+
+  #projects a {
+    font-size: 1.3rem;
   }
 
   /* Messages Section */

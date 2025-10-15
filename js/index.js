@@ -2,13 +2,13 @@ const body = document.body;
 
 //------------FOOTER--------------
 
-let footer = document.createElement("footer");
-body.appendChild(footer);
+//let footer = document.createElement("footer");
+//body.appendChild(footer);
+const footer = document.querySelector("footer");
 
 const today = new Date();
 const thisYear = today.getFullYear();
 
-footer = document.querySelector("footer");
 const copyright = document.createElement("p");
 
 copyright.innerHTML = `\u00A9 Jordan Holton ${thisYear}`;
@@ -103,3 +103,35 @@ messageForm.addEventListener("submit", function (event) {
 
   messageForm.reset();
 });
+
+//------------Project Section--------------
+fetch("https://api.github.com/users/prejordained/repos")
+  .then((response) => {
+    if (!response.ok) {
+      throw new Error("Failed to fetch data from Github. Try again later");
+    }
+    return response.json();
+  })
+  .then((repositories) => {
+    //repositories = JSON.parse(this.repositories);
+    console.log("Repositories: ", repositories);
+    const projectSection = document.getElementById("projects");
+    const projectList = projectSection.querySelector("ul");
+    projectList.innerHTML = "";
+
+    for (let i = 0; i < repositories.length; i++) {
+      const project = document.createElement("li");
+      const link = document.createElement("a");
+      link.href = repositories[i].html_url;
+      link.textContent = repositories[i].name;
+      project.appendChild(link);
+      projectList.appendChild(project);
+    }
+  })
+  .catch((error) => {
+    console.error("Error fetching repositiories", error);
+    const projectSection = document.getElementById("projects");
+    const errorMessage = document.createElement("p");
+    errorMessage.innerHTML = "Unable to load project. Try again later.";
+    projectSection.appendChild(errorMessage);
+  });
